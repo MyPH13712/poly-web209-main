@@ -3,7 +3,7 @@ import React from 'react';
 
 const { Option } = Select
 
-const SigninPage: React.FC = () => {
+const SignupPage: React.FC = () => {
 	const [form] = Form.useForm()
 	const onFinish = (values: any) => {
 		console.log('Success:', values);
@@ -18,7 +18,7 @@ const SigninPage: React.FC = () => {
 		console.log(name)
 		switch (value) {
 		  case 'male':
-		    form.setFieldsValue({name: "abc"});
+		    form.setFieldsValue({name: 'Hi, sir!'});
 		    return;
 		  case 'female':
 		    form.setFieldsValue({ note: 'Hi, lady!' });
@@ -41,19 +41,19 @@ const SigninPage: React.FC = () => {
 					autoComplete="off"
 				>
 					<Form.Item
-						label="Tên sản phẩm"
+						label="Tên"
 						name="name"
-						rules={[{ required: true, message: 'Tên sản phẩm khong được để trống' }]}
+						rules={[{ required: true, message: 'Tên không được để trống' }]}
 					>
 						<Input />
 					</Form.Item>
 
 					<Form.Item
-						label="Giá gốc"
-						name="originalPrice"
-						rules={[{ required: true, message: 'Gía không được để trống' }]}
+						label="Email"
+						name="email"
+						rules={[{ required: true, message: 'Email không được để trống' }]}
 					>
-						<InputNumber style={{ width: '100%' }} />
+						<Input style={{ width: '100%' }} />
 					</Form.Item>
 
 					<Form.Item name="gender" label="Gender" rules={[{ required: true }]}>
@@ -68,16 +68,9 @@ const SigninPage: React.FC = () => {
 						</Select>
 					</Form.Item>
 
-					<Form.Item
-						label="Thông báo"
-						name="note"
-					>
-						<Input />
-					</Form.Item>
-
 					<Form.Item>
 						<Button type="primary" htmlType="submit">
-							Tạo sản phẩm
+							Đăng ký
 						</Button>
 					</Form.Item>
 				</Form>
@@ -87,4 +80,4 @@ const SigninPage: React.FC = () => {
 	);
 };
 
-export default SigninPage;
+export default SignupPage;

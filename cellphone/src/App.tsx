@@ -8,9 +8,9 @@ import AdminLayout from './components/Layout/admin'
 import UserLayout from './components/Layout/user'
 import HomePage from './pages/Home/home'
 import AddProductPage from './pages/Admin/Product/add'
-
 import EditProduct from './pages/Admin/Product/edit'
-import SigninPage from './pages/Auth/signin'
+import LoginPage from './pages/Auth/login'
+import SignupPage from './pages/Auth/signup'
 
 export const ThemeContext = React.createContext({
   theme: "light",
@@ -24,7 +24,8 @@ function App(props: any) {
  
       <Routes>
         {/* Auth */}
-        <Route path='/signin' element={<SigninPage/>}/>
+        <Route path='/login' element={<LoginPage/>}/>
+        <Route path='/signup' element={<SignupPage/>}/>
         {/* User layout */}
         <Route path='/' element={<UserLayout/>}>
           <Route index element={<HomePage/>}/>

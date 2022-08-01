@@ -23,7 +23,6 @@ const { TextArea } = Input;
 const { Option } = Select;
 type Props = {};
 const ProductEdit = (props: Props) => {
-  const [base64Image, setBase64Image] = React.useState("");
   const [uploadedImage, setUploadedImage] = React.useState("");
   const [cate, setCates] = useState<CategoryType[]>([]);
   const { _id } = useParams();
@@ -46,7 +45,7 @@ const ProductEdit = (props: Props) => {
   const navigate = useNavigate();
   const handleChangeImage = (event: any) => {
     const file = event.target.files[0];
-    // previewFile(file)
+
     const reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onloadend = () => {
@@ -94,7 +93,7 @@ const ProductEdit = (props: Props) => {
     <>
       <Breadcrumb>
         <Typography.Title level={2} style={{ margin: 0 }}>
-          Sửa
+          Cập nhật sản phẩm
         </Typography.Title>
       </Breadcrumb>
       <Form
@@ -220,10 +219,6 @@ const ProductEdit = (props: Props) => {
 };
 const Container = styled.div`
   text-align: center;
-`;
-
-const Label = styled.div`
-  text-align: left;
 `;
 
 const UploadWrapper = styled.div`
