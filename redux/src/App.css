@@ -44,7 +44,6 @@
   display: flex;
   flex-direction: row;
   text-align: left;
-  border: 1px solid #c0c0c0;
 }
 .product-item {
   cursor: pointer;
@@ -52,7 +51,6 @@
 }
 
 .cart-container {
-  border: 1px solid #c0c0c0;
   margin-top: 40px;
 } 
 
@@ -81,12 +79,7 @@
 .price{
   margin-top: 20px;
 }
-.fa-cart-shopping{
-  color: white;
-  background-color: rgb(251, 114, 114);
-  padding: 5px;
-  border-radius: 2px;
-}
+
 .price-cart{
   font-weight: bold;
 }
@@ -113,8 +106,7 @@ h3{
 hr{
   margin: 30px 40px;
 }
-.tt{
+.cart{
   margin-right: 150px;
-  color: rgb(251, 114, 114);
   font-weight: bold;
 }

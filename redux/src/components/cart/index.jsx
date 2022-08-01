@@ -1,6 +1,5 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { InputNumber } from "antd";
 import {currency} from "../../helper.js";
 import cartSlice from "./cartSlice.js";
 const Cart = () => {
@@ -16,7 +15,7 @@ const Cart = () => {
   return (
     <div className="cart-container">
       <h3>Cart</h3>
-      <table className="all-cart">
+      <table>
         <tbody>
           {cart.cart?.map((item) => (
             <tr className="cart-item">
@@ -25,14 +24,14 @@ const Cart = () => {
                 <img style={{ width: "30%" }} src={item.image} alt="" />
               </td>
               <td width={500}>
-                <p className="qtt">Số lượng</p>
+                <p>Số lượng</p>
                 <div className="quantity">
-                  <button className="click" onClick={() => decrease(item.id)}>
+                  <button className="click"onClick={() => decrease(item.id)}>
                     -
                   </button>
                   <input  type="text" value={item.amount}/>
                   <button className="click" onClick={() => increase(item.id)}>
-                    +
+                   +
                   </button>
                 </div>
               </td>
@@ -48,7 +47,7 @@ const Cart = () => {
       <hr />
       <div className="total">
         <p>Total</p>
-        <p className="tt">{currency(cart.total)} đ</p>
+        <p className="cart">{currency(cart.total)} đ</p>
       </div>
     </div>
   );

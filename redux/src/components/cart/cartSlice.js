@@ -17,12 +17,12 @@ const cartSlice = createSlice({
       state.total = state.cart.reduce((accu, item) => accu + item.saleOffPrice * item.amount,0)
     },
     increase: (state, action) => {
-      let currentItem = state.cart.find((c) => c.id == action.payload);
+      let currentItem = state.cart.find(item => item.id === action.payload);
       currentItem.amount++;
       state.total = state.cart.reduce((accu, item) => accu + item.saleOffPrice * item.amount,0)
     },
     decrease: (state, action) => {
-      let currentItem = state.cart.find((c) => c.id == action.payload);
+      let currentItem = state.cart.find(item => item.id == action.payload);
       currentItem.amount--;
       if (currentItem.amount < 1) {
         const confirm = window.confirm("Bạn có muốn xóa sản phẩm không?");
