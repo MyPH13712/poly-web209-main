@@ -9,7 +9,7 @@ import UserLayout from './components/Layout/user'
 import HomePage from './pages/Home/home'
 import AddProductPage from './pages/Admin/Product/add'
 import EditProduct from './pages/Admin/Product/edit'
-import LoginPage from './pages/Auth/login'
+import SigninPage from './pages/Auth/login'
 import SignupPage from './pages/Auth/signup'
 
 export const ThemeContext = React.createContext({
@@ -24,7 +24,7 @@ function App(props: any) {
  
       <Routes>
         {/* Auth */}
-        <Route path='/login' element={<LoginPage/>}/>
+        <Route path='/login' element={<SigninPage/>}/>
         <Route path='/signup' element={<SignupPage/>}/>
         {/* User layout */}
         <Route path='/' element={<UserLayout/>}>

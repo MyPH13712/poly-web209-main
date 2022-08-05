@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import Header from '../../components/Header'
+import Footer from '../../components/Footer'
 import {Outlet} from 'react-router-dom'
 import { ThemeContext } from "../../App";
 import styled from "styled-components";
@@ -11,6 +12,7 @@ const UserLayout = (props: any) => {
         <Container theme={theme}>
             <Header/>
             <Outlet/>
+            <Footer/>
         </Container>
     )
 }
