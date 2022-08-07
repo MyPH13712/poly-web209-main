@@ -1,6 +1,6 @@
 export type ProductType = {
     status: number;
-    _id: string;
+    id:number;
     name: string;
     originalPrice: number;
     saleOffPrice: number;
@@ -9,7 +9,6 @@ export type ProductType = {
     category: string;
     createdAt: Date;
     updatedAt: Date;
-    __v: number;
   };
   export type ProductUpdateType = {
     name: string;

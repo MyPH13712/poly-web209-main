@@ -1,5 +1,15 @@
 {
   "users": [],
+  "category": [
+    {
+      "name": "Category 1",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Category 2"
+    }
+  ],
   "products": [
     {
       "name": "Apple iPhone 13 Pro Max",
